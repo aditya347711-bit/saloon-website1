@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AAKARSHAN HAIR DRESSER</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    scroll-behavior:smooth;
+}
+
+header{
+    background:#111;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#222;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:0 20px;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+nav a:hover{
+    color:#ff9800;
+}
+
+.hero{
+    background:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70') no-repeat center center/cover;
+    height:400px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    font-size:40px;
+}
+
+.section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.section h2{
+    margin-bottom:30px;
+    color:#333;
+}
+
+.services{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:15px 0;
+    color:#ff9800;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#ff9800;
+    border:none;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#e68900;
+}
+
+.contact-box{
+    background:#222;
+    color:white;
+    padding:40px;
+}
+
+.contact-box a{
+    color:#ff9800;
+    text-decoration:none;
+}
+
+footer{
+    background:#111;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+/* Popup Form */
+
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:white;
+    padding:30px;
+    width:350px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.popup-content input, .popup-content select{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.close-btn{
+    background:red;
+    margin-top:10px;
+}
+
+.success{
+    color:green;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>AAKARSHAN HAIR DRESSER</h1>
+    <p>Premium Men's Salon in Dhanbad</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+    <h1>Style That Defines You</h1>
+</section>
+
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186" alt="">
+            <h3>Hair Cutting</h3>
+            <p>Modern & Classic Haircuts</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1621607512022-6aecc4fed814" alt="">
+            <h3>Beard Styling</h3>
+            <p>Professional Beard Grooming</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" alt="">
+            <h3>Hair Coloring</h3>
+            <p>Trendy Hair Colors</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250" alt="">
+            <h3>Facial</h3>
+            <p>Men’s Skin Care & Facial</p>
+        </div>
+    </div>
+    <button onclick="openPopup()">Book Appointment</button>
+</section>
+
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Owner: <strong>Sarju Thakur</strong></p>
+    <p>AAKARSHAN HAIR DRESSER provides all men's salon services with professional care and modern styling.</p>
+    <p>Serving customers in Digwadih No. 10, Near Pratap Mall, Dhanbad, Jharkhand.</p>
+</section>
+
+<section id="contact" class="contact-box">
+    <h2>Contact Us</h2>
+    <p>📍 Digwadih No. 10, Near Pratap Mall, Dhanbad, Jharkhand</p>
+    <p>📞 <a href="tel:9162463324">9162463324</a></p>
+    <p>📞 <a href="tel:6201056703">6201056703</a></p>
+</section>
+
+<footer>
+    <p>© 2026 AAKARSHAN HAIR DRESSER | All Rights Reserved</p>
+</footer>
+
+<!-- Popup Form -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h2>Book Appointment</h2>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="date" id="date" required>
+        <select id="service">
+            <option>Hair Cutting</option>
+            <option>Beard Styling</option>
+            <option>Hair Coloring</option>
+            <option>Facial</option>
+        </select>
+        <button onclick="submitForm()">Submit</button>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+        <div class="success" id="successMsg"></div>
+    </div>
+</div>
+
+<script>
+function openPopup(){
+    document.getElementById("popup").style.display="flex";
+}
+
+function closePopup(){
+    document.getElementById("popup").style.display="none";
+    document.getElementById("successMsg").innerHTML="";
+}
+
+function submitForm(){
+    let name=document.getElementById("name").value;
+    let date=document.getElementById("date").value;
+    
+    if(name==="" || date===""){
+        alert("Please fill all details!");
+        return;
+    }
+
+    document.getElementById("successMsg").innerHTML="Appointment Booked Successfully!";
+}
+</script>
+
+</body>
+</html>
